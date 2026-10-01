@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "siteTitle": "Santi's Makeover & Beauty Salon | Academy — Debra Bazaar",
+    "siteDescription": "ISO-certified beauty salon and makeup academy in Debra Bazaar, Paschim Medinipur. Bridal makeup, hair treatments, luxury facials, nail art and professional beautician courses since 2010.",
+    "home": "Bridal Makeup, Beauty Salon & Academy in Debra",
+    "services": "Services & Price List",
+    "servicesDescription": "Bridal makeup, party makeup, keratin and hair spa, gold and diamond facials, nail art, waxing and threading in Debra Bazaar. See prices and book on WhatsApp.",
+    "academy": "ISO-Certified Makeup & Beautician Courses",
+    "academyDescription": "Join the 8-week Makeup Artist Certification or 12-week Professional Beautician Course at Santi's Makeover Academy, Debra — hands-on training, ISO certificate and career support.",
+    "gallery": "Gallery",
+    "galleryDescription": "Bridal looks, makeup, hair, skin and nail work from Santi's Makeover & Beauty Salon in Debra Bazaar.",
+    "about": "About Santi Dolai & Our Salon",
+    "aboutDescription": "Founded in 2010 by Santi Dolai, Santi's Makeover is Debra Bazaar's ISO-certified destination for luxury beauty and professional training.",
+    "contact": "Contact & Book an Appointment",
+    "contactDescription": "Call or WhatsApp +91 90027 17291. Haipat, Debra Bazaar, West Bengal 721126. Open daily 10 AM – 8 PM."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "academy": "Academy",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "skip": "Skip to content",
+    "language": "বাংলা",
+    "languageLabel": "Switch to Bengali"
+  },
+  "brand": {
+    "sub": "Beauty Salon & Academy"
+  },
+  "cta": {
+    "book": "Book on WhatsApp",
+    "bookShort": "Book now",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "directions": "Directions",
+    "explore": "Explore services",
+    "viewPrices": "View price list",
+    "viewAll": "View all",
+    "enquire": "Enquire on WhatsApp",
+    "bookThis": "Book",
+    "academy": "Explore the academy",
+    "about": "Our story",
+    "gallery": "See the gallery",
+    "messages": {
+      "general": "Hello! I'd like to book an appointment at Santi's Makeover.",
+      "service": "Hello! I'd like to book: {service}. Please share available slots.",
+      "course": "Hello! I'm interested in the {course}. Please share fees and next batch dates."
+    }
+  },
+  "hero": {
+    "eyebrow": "Debra Bazaar · Since 2010",
+    "title": "Beauty that feels like you,",
+    "titleAccent": "only more radiant.",
+    "lead": "Bridal artistry, luxury hair and skin care, and an ISO-certified academy — all under one roof in Debra.",
+    "badge": "ISO Certified Training Centre",
+    "rating": "Loved by 1000+ brides & clients",
+    "isoTitle": "Certified",
+    "isoSub": "Training academy",
+    "years": "years"
+  },
+  "home": {
+    "bridalTag": "Signature service",
+    "bridalTitle": "Your wedding look, crafted with care",
+    "bridalText": "From the first trial to the last photo of the night, Santi and her team create bridal looks that honour tradition and last all day — Bengali chandan saaj, HD or airbrush.",
+    "bridalPoints": [
+      "Personal consultation & trial",
+      "HD & airbrush finishes",
+      "Hair, draping & jewellery setting",
+      "On-location service available"
+    ],
+    "servicesTag": "What we offer",
+    "servicesTitle": "Premium beauty services",
+    "servicesText": "Thoughtful treatments, premium products and trained hands — for everyday care and your biggest days.",
+    "academyTag": "Santi's Academy",
+    "academyTitle": "Turn your passion into a profession",
+    "academyText": "ISO-certified makeup and beautician courses with hands-on practice on live models, small batches and real career support.",
+    "galleryTag": "Our work",
+    "galleryTitle": "A glimpse of the glow",
+    "reviewsTag": "Kind words",
+    "reviewsTitle": "What our clients & students say",
+    "ctaTitle": "Ready for your makeover?",
+    "ctaText": "Message us on WhatsApp — we usually reply within the hour during salon hours."
+  },
+  "services": {
+    "tag": "Services & prices",
+    "title": "Every service, one clear price list",
+    "lead": "Prices are starting rates. Final cost depends on hair length, products chosen and the look you want — we'll confirm before we begin.",
+    "from": "from",
+    "note": "Prices may vary. Please confirm on WhatsApp before your visit.",
+    "jump": "Jump to"
+  },
+  "academy": {
+    "tag": "Santi's Makeover Academy",
+    "title": "Professional training, ISO-certified",
+    "lead": "Learn from a working salon with 15+ years of experience. Small batches, live models and a certificate that employers recognise.",
+    "duration": "Duration",
+    "level": "Level",
+    "fee": "Course fee",
+    "certificate": "Certificate",
+    "certificateValue": "ISO certified",
+    "learn": "What you'll learn",
+    "perksTitle": "Why train with us",
+    "storyTag": "Student story",
+    "formTitle": "Ask about the next batch"
+  },
+  "gallery": {
+    "tag": "Gallery",
+    "title": "Looks we love",
+    "lead": "A selection of bridal, makeup, hair, skin and nail work.",
+    "all": "All",
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image",
+    "more": "See more of our work on Facebook"
+  },
+  "about": {
+    "tag": "Our story",
+    "title": "Where beauty meets artistry",
+    "p1": "Santi's Makeover & Beauty Salon was founded in 2010 by Santi Dolai with a simple belief: every woman in Debra deserves big-city quality beauty care, close to home.",
+    "p2": "Over fifteen years the salon has grown into Debra Bazaar's trusted destination for bridal makeup, hair and skin care — and an ISO-certified academy that has trained 100+ beauty professionals.",
+    "p3": "We combine time-honoured techniques with modern products and methods, and we never stop learning ourselves.",
+    "founderRole": "Founder & Lead Artist",
+    "valuesTitle": "What we stand for",
+    "values": [
+      {
+        "title": "Hygiene first",
+        "text": "Sanitised tools, fresh disposables and a spotless space — every time."
+      },
+      {
+        "title": "Premium products",
+        "text": "Trusted professional brands, chosen for your skin and hair type."
+      },
+      {
+        "title": "Honest advice",
+        "text": "We recommend what you need, not what costs the most."
+      },
+      {
+        "title": "Always learning",
+        "text": "Regular training in the latest bridal and hair techniques."
+      }
+    ],
+    "journey": "Our journey",
+    "meet": "Meet Santi Dolai"
+  },
+  "contact": {
+    "tag": "Reach us",
+    "title": "Let's plan your visit",
+    "lead": "Book a service, ask about a course, or just say hello. WhatsApp is the fastest way to reach us.",
+    "address": "Address",
+    "phone": "Phone / WhatsApp",
+    "email": "Email",
+    "hours": "Opening hours",
+    "follow": "Follow us",
+    "faqTitle": "Frequently asked questions"
+  },
+  "form": {
+    "title": "Send us a message",
+    "subtitle": "This opens WhatsApp with your message ready to send.",
+    "name": "Your name",
+    "namePlaceholder": "e.g. Priya Maity",
+    "phone": "Phone number",
+    "phonePlaceholder": "e.g. 98765 43210",
+    "interest": "Interested in",
+    "interestPlaceholder": "Select a service or course",
+    "date": "Preferred date",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about the look you want, your event date…",
+    "submit": "Send via WhatsApp",
+    "other": "Something else",
+    "required": "Please enter your name.",
+    "greeting": "Hello! I'm {name}.",
+    "lineInterest": "Interested in: {value}",
+    "linePhone": "Phone: {value}",
+    "lineDate": "Preferred date: {value}",
+    "lineMessage": "Message: {value}"
+  },
+  "footer": {
+    "about": "ISO-certified beauty salon and training academy in Debra Bazaar, West Bengal — since 2010.",
+    "explore": "Explore",
+    "services": "Services",
+    "visit": "Visit",
+    "rights": "All rights reserved.",
+    "credit": "Designed & developed by"
+  },
+  "notFound": {
+    "title": "This page took a day off",
+    "text": "The page you're looking for doesn't exist. Let's get you back to something beautiful.",
+    "home": "Back to home"
+  }
+}

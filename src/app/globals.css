@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ── Brand tokens ─────────────────────────────────────────── */
+@theme {
+  --color-rose: #b5334e;
+  --color-rose-deep: #8c1f3a;
+  --color-blush: #f0b8c4;
+  --color-blush-soft: #fbeef1;
+  --color-gold: #c9a96e;
+  --color-gold-deep: #8a6a33;
+  --color-gold-soft: #edd9b0;
+  --color-cream: #fdf6f0;
+  --color-ivory: #fef9f5;
+  --color-ink: #1a1015;
+  --color-plum: #4a3540;
+  --color-muted: #75606a;
+  --color-line: #ecdfd6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-display: var(--font-cormorant), "Noto Serif Bengali", Georgia, serif;
+  --font-sans: var(--font-jost), "Hind Siliguri", system-ui, sans-serif;
+  --font-script: var(--font-dancing), cursive;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --shadow-soft: 0 10px 40px -12px rgb(26 16 21 / 0.14);
+  --shadow-lift: 0 22px 60px -18px rgb(140 31 58 / 0.28);
+
+  --animate-shimmer: shimmer 1.6s linear infinite;
+  --animate-rise: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes shimmer {
+    from { background-position: -400px 0; }
+    to { background-position: 400px 0; }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Bengali: swap to Bengali-first fonts and give glyphs more room */
+:lang(bn) {
+  --font-display: var(--font-noto-serif-bn), var(--font-cormorant), serif;
+  --font-sans: var(--font-hind-siliguri), var(--font-jost), sans-serif;
+}
+
+/* ── Base ─────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    font-variant-numeric: lining-nums;
+  }
+  :lang(bn) body,
+  body:lang(bn) {
+    line-height: 1.75;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  :lang(bn) :is(h1, h2, h3, h4) {
+    line-height: 1.35;
+  }
+  /* Wide tracking and uppercase break up Bengali conjuncts — neutralise them */
+  :lang(bn) [class*="tracking-"] {
+    letter-spacing: 0.01em !important;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-blush);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ── Utilities ────────────────────────────────────────────── */
+@utility container-x {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) { padding-inline: 1.5rem; }
+  @media (width >= 64rem) { padding-inline: 2rem; }
+}
+
+@utility section-y {
+  padding-block: 4.5rem;
+  @media (width >= 48rem) { padding-block: 6.5rem; }
+}
+
+@utility skeleton {
+  background-color: #eadbd9;
+  background-image: linear-gradient(90deg, #eadbd9 0, #f5ebe9 40%, #eadbd9 80%);
+  background-size: 800px 100%;
+  animation: var(--animate-shimmer);
+}
+
+/* Scroll-driven reveal: progressive enhancement, no JS, never hides content */
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: none; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry calc(5% + var(--reveal-delay, 0%)) entry calc(45% + var(--reveal-delay, 0%));
+    }
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
 }

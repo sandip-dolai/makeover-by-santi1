@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Windows-only npm setting (script-shell); must not reach Vercel
+.npmrc

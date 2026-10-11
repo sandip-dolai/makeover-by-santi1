@@ -21,7 +21,7 @@ export async function SignatureBridal() {
         <Reveal className="relative mx-auto w-full max-w-lg">
           <div className="relative ml-auto aspect-[3/4] w-[82%] overflow-hidden rounded-[2rem] shadow-lift">
             <Image
-              src="/images/bridal-saree.jpg"
+              src="/images/traditional-indian-bride-banarasi-saree.jpg"
               alt={tr(bridal.title, locale)}
               fill
               sizes="(min-width: 1024px) 26rem, 80vw"
@@ -30,8 +30,8 @@ export async function SignatureBridal() {
           </div>
           <div className="absolute bottom-[-8%] left-0 aspect-square w-[46%] overflow-hidden rounded-[1.5rem] border-[6px] border-ivory shadow-soft">
             <Image
-              src="/images/makeup-eyes.jpg"
-              alt=""
+              src="/images/indian-bridal-eye-makeup-soft-glam.jpg"
+              alt="Indian bridal eye makeup"
               fill
               sizes="(min-width: 1024px) 14rem, 45vw"
               className="object-cover"

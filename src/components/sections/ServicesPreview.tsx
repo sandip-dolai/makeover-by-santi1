@@ -39,7 +39,7 @@ export async function ServicesPreview() {
                         alt=""
                         fill
                         sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 78vw"
-                        className="object-cover transition duration-700 group-hover:scale-105"
+                        className={`object-cover transition duration-700 group-hover:scale-105 ${svc.imagePosition ?? "object-center"}`}
                       />
                       <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-rose-deep backdrop-blur">
                         {tr(svc.tagline, locale)}

@@ -15,7 +15,7 @@ export async function AcademyTeaser() {
   return (
     <section className="section-y relative isolate overflow-hidden bg-ink text-white">
       <Image
-        src="/images/makeup-flatlay.jpg"
+        src="/images/luxury-bridal-cosmetics-vanity-flatlay.jpg"
         alt=""
         fill
         sizes="100vw"

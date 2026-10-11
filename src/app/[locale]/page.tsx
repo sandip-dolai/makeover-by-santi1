@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { AcademyTeaser } from "@/components/sections/AcademyTeaser";
 import { CtaBanner } from "@/components/sections/CtaBanner";
-import { GalleryPreview } from "@/components/sections/GalleryPreview";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
 import { SignatureBridal } from "@/components/sections/SignatureBridal";
@@ -27,7 +26,6 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <SignatureBridal />
       <ServicesPreview />
       <AcademyTeaser />
-      <GalleryPreview />
       <Testimonials />
       <CtaBanner />
     </>

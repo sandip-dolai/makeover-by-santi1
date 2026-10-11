@@ -49,7 +49,7 @@ export default async function AcademyPage({ params }: PageProps<"/[locale]/acade
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/makeup-brushes.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/professional-makeup-artist-kit-brushes.jpg" />
 
       {/* Courses side by side */}
       <section className="section-y">

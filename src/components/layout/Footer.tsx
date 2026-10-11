@@ -46,7 +46,7 @@ export async function Footer() {
         <div>
           <h2 className={heading}>{t("explore")}</h2>
           <ul className="space-y-3 text-sm">
-            {(["services", "academy", "gallery", "about", "contact"] as const).map((k) => (
+            {(["services", "academy", "about", "contact"] as const).map((k) => (
               <li key={k}>
                 <Link href={`/${k}`} className={link}>
                   {nav(k)}

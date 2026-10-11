@@ -41,7 +41,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/salon-interior-2.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/modern-hair-styling-stations-salon.jpg" />
 
       <section className="section-y">
         <div className="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">

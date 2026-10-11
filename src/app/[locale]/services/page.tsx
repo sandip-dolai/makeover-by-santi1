@@ -27,7 +27,7 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/salon-interior.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/luxury-beauty-salon-interior-debra-medinipur.jpg" />
 
       {/* Category jump bar */}
       <nav
@@ -64,7 +64,7 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
                       alt={title}
                       fill
                       sizes="(min-width: 1024px) 34rem, 100vw"
-                      className="object-cover"
+                      className={`object-cover ${svc.imagePosition ?? "object-center"}`}
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-6 pt-20 text-white">
                       <p className="text-xs uppercase tracking-[0.2em] text-gold-soft">{tr(svc.tagline, locale)}</p>

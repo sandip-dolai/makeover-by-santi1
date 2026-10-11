@@ -7,8 +7,6 @@
     "servicesDescription": "Bridal makeup, party makeup, keratin and hair spa, gold and diamond facials, nail art, waxing and threading in Debra Bazaar. See prices and book on WhatsApp.",
     "academy": "ISO-Certified Makeup & Beautician Courses",
     "academyDescription": "Join the 8-week Makeup Artist Certification or 12-week Professional Beautician Course at Santi's Makeover Academy, Debra — hands-on training, ISO certificate and career support.",
-    "gallery": "Gallery",
-    "galleryDescription": "Bridal looks, makeup, hair, skin and nail work from Santi's Makeover & Beauty Salon in Debra Bazaar.",
     "about": "About Santi Dolai & Our Salon",
     "aboutDescription": "Founded in 2010 by Santi Dolai, Santi's Makeover is Debra Bazaar's ISO-certified destination for luxury beauty and professional training.",
     "contact": "Contact & Book an Appointment",
@@ -18,7 +16,6 @@
     "home": "Home",
     "services": "Services",
     "academy": "Academy",
-    "gallery": "Gallery",
     "about": "About",
     "contact": "Contact",
     "menu": "Open menu",
@@ -43,7 +40,6 @@
     "bookThis": "Book",
     "academy": "Explore the academy",
     "about": "Our story",
-    "gallery": "See the gallery",
     "messages": {
       "general": "Hello! I'd like to book an appointment at Santi's Makeover.",
       "service": "Hello! I'd like to book: {service}. Please share available slots.",
@@ -77,8 +73,6 @@
     "academyTag": "Santi's Academy",
     "academyTitle": "Turn your passion into a profession",
     "academyText": "ISO-certified makeup and beautician courses with hands-on practice on live models, small batches and real career support.",
-    "galleryTag": "Our work",
-    "galleryTitle": "A glimpse of the glow",
     "reviewsTag": "Kind words",
     "reviewsTitle": "What our clients & students say",
     "ctaTitle": "Ready for your makeover?",
@@ -105,16 +99,6 @@
     "perksTitle": "Why train with us",
     "storyTag": "Student story",
     "formTitle": "Ask about the next batch"
-  },
-  "gallery": {
-    "tag": "Gallery",
-    "title": "Looks we love",
-    "lead": "A selection of bridal, makeup, hair, skin and nail work.",
-    "all": "All",
-    "close": "Close",
-    "prev": "Previous image",
-    "next": "Next image",
-    "more": "See more of our work on Facebook"
   },
   "about": {
     "tag": "Our story",

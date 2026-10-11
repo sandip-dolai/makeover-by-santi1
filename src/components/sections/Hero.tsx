@@ -1,7 +1,6 @@
 import { ArrowRight, BadgeCheck, Star } from "lucide-react";
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
-import { gallery, t as tr } from "@/content/site";
 import { WhatsAppIcon } from "../ui/BrandIcons";
 import { ButtonLink } from "../ui/Button";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -68,8 +67,8 @@ export async function Hero() {
           />
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-3xl bg-blush-soft shadow-lift">
             <Image
-              src="/images/hero-bride.jpg"
-              alt={tr(gallery[0].alt, locale)}
+              src="/images/bengali-bridal-makeup-artist-debra.jpg"
+              alt={locale === "bn" ? "লাল-সোনালি ট্র্যাডিশনাল সাজে কনে" : "Bride in traditional red and gold bridal look"}
               fill
               priority
               sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, 90vw"

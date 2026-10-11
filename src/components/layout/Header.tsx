@@ -15,7 +15,6 @@ const links = [
   { href: "/", key: "home" },
   { href: "/services", key: "services" },
   { href: "/academy", key: "academy" },
-  { href: "/gallery", key: "gallery" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ] as const;

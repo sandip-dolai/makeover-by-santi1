@@ -3,13 +3,12 @@ import { getTranslations } from "next-intl/server";
 import { business } from "@/content/site";
 import { routing, type Locale } from "@/i18n/routing";
 
-export type PageKey = "home" | "services" | "academy" | "gallery" | "about" | "contact";
+export type PageKey = "home" | "services" | "academy" | "about" | "contact";
 
 export const pagePaths: Record<PageKey, string> = {
   home: "",
   services: "/services",
   academy: "/academy",
-  gallery: "/gallery",
   about: "/about",
   contact: "/contact",
 };

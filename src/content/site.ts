@@ -63,6 +63,7 @@ export type ServiceCategory = {
   tagline: L;
   description: L;
   image: string;
+  imagePosition?: string;
   icon: "crown" | "sparkles" | "wind" | "gem" | "brush" | "leaf";
   items: ServiceItem[];
 };
@@ -76,7 +77,8 @@ export const services: ServiceCategory[] = [
       en: "Your most important day deserves flawless, long-lasting beauty. Bespoke bridal looks — Bengali, North-Indian or contemporary — that stay picture-perfect from morning to midnight.",
       bn: "জীবনের সবচেয়ে বিশেষ দিনে চাই নিখুঁত, দীর্ঘস্থায়ী সৌন্দর্য। বাঙালি, নর্থ-ইন্ডিয়ান বা আধুনিক — আপনার পছন্দমতো ব্রাইডাল লুক, যা সকাল থেকে মাঝরাত পর্যন্ত থাকে একদম পারফেক্ট।",
     },
-    image: "/images/bridal-saree.jpg",
+    image: "/images/traditional-indian-bride-banarasi-saree.jpg",
+    imagePosition: "object-top",
     icon: "crown",
     items: [
       { name: { en: "Traditional Bengali Bridal (with chandan art)", bn: "ট্র্যাডিশনাল বাঙালি ব্রাইডাল (চন্দন সাজ সহ)" }, price: "₹8,000" }, // TODO price
@@ -94,7 +96,7 @@ export const services: ServiceCategory[] = [
       en: "Glam, soft-glam or natural — polished looks for weddings, pujas, receptions and photo shoots.",
       bn: "গ্ল্যাম, সফট-গ্ল্যাম বা ন্যাচারাল — বিয়েবাড়ি, পুজো, রিসেপশন বা ফটোশুটের জন্য নিখুঁত সাজ।",
     },
-    image: "/images/makeup-eyes.jpg",
+    image: "/images/indian-bridal-eye-makeup-soft-glam.jpg",
     icon: "sparkles",
     items: [
       { name: { en: "Party Makeup", bn: "পার্টি মেকআপ" }, price: "₹1,500" }, // TODO price
@@ -111,7 +113,7 @@ export const services: ServiceCategory[] = [
       en: "Revitalise your hair with keratin, botox, smoothening and nourishing spa treatments curated for your hair type.",
       bn: "কেরাটিন, বোটক্স, স্মুদেনিং আর হেয়ার স্পা — আপনার চুলের ধরন বুঝে তৈরি ট্রিটমেন্টে চুল হবে প্রাণবন্ত।",
     },
-    image: "/images/hair-wash.jpg",
+    image: "/images/luxury-indian-hair-spa-wash.jpg",
     icon: "wind",
     items: [
       { name: { en: "Haircut & Styling", bn: "হেয়ারকাট ও স্টাইলিং" }, price: "₹300" }, // TODO price
@@ -130,7 +132,7 @@ export const services: ServiceCategory[] = [
       en: "Gold, diamond and pearl facials, cleanups and de-tan treatments for radiant, glowing skin.",
       bn: "গোল্ড, ডায়মন্ড ও পার্ল ফেসিয়াল, ক্লিনআপ আর ডি-ট্যান — ত্বক হবে উজ্জ্বল ও ঝলমলে।",
     },
-    image: "/images/facial-mask.jpg",
+    image: "/images/ayurvedic-gold-facial-skin-treatment.jpg",
     icon: "gem",
     items: [
       { name: { en: "Cleanup", bn: "ক্লিনআপ" }, price: "₹400" }, // TODO price
@@ -149,7 +151,7 @@ export const services: ServiceCategory[] = [
       en: "Creative nail art, gel polish, manicures and pedicures for the perfect finishing touch.",
       bn: "ক্রিয়েটিভ নেল আর্ট, জেল পলিশ, ম্যানিকিওর ও পেডিকিওর — সাজের নিখুঁত শেষ ছোঁয়া।",
     },
-    image: "/images/nails-dark.jpg",
+    image: "/images/indian-bridal-nail-art-maroon-gold.jpg",
     icon: "brush",
     items: [
       { name: { en: "Manicure", bn: "ম্যানিকিওর" }, price: "₹400" }, // TODO price
@@ -167,7 +169,7 @@ export const services: ServiceCategory[] = [
       en: "Smooth, lasting hair removal with gentle premium waxes and precise threading.",
       bn: "নরম প্রিমিয়াম ওয়াক্স আর নিখুঁত থ্রেডিং — মসৃণ ও দীর্ঘস্থায়ী ফল।",
     },
-    image: "/images/threading.jpg",
+    image: "/images/eyebrow-threading-facial-grooming.jpg",
     icon: "leaf",
     items: [
       { name: { en: "Eyebrow Threading", bn: "আইব্রো থ্রেডিং" }, price: "₹50" }, // TODO price
@@ -210,7 +212,7 @@ export const courses: Course[] = [
       { en: "Portfolio development", bn: "পোর্টফোলিও তৈরি" },
     ],
     fee: "₹25,000", // TODO price
-    image: "/images/makeup-brushes.jpg",
+    image: "/images/professional-makeup-artist-kit-brushes.jpg",
   },
   {
     id: "beautician",
@@ -230,7 +232,7 @@ export const courses: Course[] = [
       { en: "Salon management skills", bn: "স্যালন ম্যানেজমেন্ট" },
     ],
     fee: "₹30,000", // TODO price
-    image: "/images/makeup-palette.jpg",
+    image: "/images/pro-eyeshadow-palette-bridal-makeup.jpg",
   },
 ];
 
@@ -268,38 +270,6 @@ export const testimonials: { name: string; role: L; quote: L; lang?: "bn" }[] = 
       bn: "আমি হেয়ার গ্রোথ ট্রিটমেন্টের জন্য ম্যামের কাছে এসেছিলাম, এখন প্রায় ২ মাস হয়ে গেছে। খুব ভালো রেজাল্ট পেয়েছি — স্ক্যাল্পে অনেক নতুন চুল গজাচ্ছে। বিশেষ করে ম্যাম এবং পুরো টিমের ব্যবহার খুবই ভালো।",
     },
   },
-];
-
-/* ── Gallery ──────────────────────────────────────────────── */
-export type GalleryCategory = "bridal" | "makeup" | "hair" | "skin" | "nails" | "salon";
-export const galleryCategories: { id: GalleryCategory; label: L }[] = [
-  { id: "bridal", label: { en: "Bridal", bn: "ব্রাইডাল" } },
-  { id: "makeup", label: { en: "Makeup", bn: "মেকআপ" } },
-  { id: "hair", label: { en: "Hair", bn: "চুল" } },
-  { id: "skin", label: { en: "Skin", bn: "ত্বক" } },
-  { id: "nails", label: { en: "Nails", bn: "নখ" } },
-  { id: "salon", label: { en: "Our Salon", bn: "আমাদের স্যালন" } },
-];
-
-export const gallery: { src: string; alt: L; category: GalleryCategory; tall?: boolean }[] = [
-  { src: "/images/hero-bride.jpg", alt: { en: "Bride in traditional red and gold bridal look", bn: "লাল-সোনালি ট্র্যাডিশনাল সাজে কনে" }, category: "bridal", tall: true },
-  { src: "/images/bridal-saree.jpg", alt: { en: "Bride in a silk saree with jewellery", bn: "সিল্ক শাড়ি ও গয়নায় কনে" }, category: "bridal", tall: true },
-  { src: "/images/makeup-eyes.jpg", alt: { en: "Soft-glam eye makeup", bn: "সফট-গ্ল্যাম আই মেকআপ" }, category: "makeup" },
-  { src: "/images/makeup-flatlay.jpg", alt: { en: "Makeup brushes and products", bn: "মেকআপ ব্রাশ ও প্রোডাক্ট" }, category: "makeup" },
-  { src: "/images/makeup-products.jpg", alt: { en: "Premium makeup products", bn: "প্রিমিয়াম মেকআপ প্রোডাক্ট" }, category: "makeup" },
-  { src: "/images/hair-long.jpg", alt: { en: "Healthy long wavy hair", bn: "স্বাস্থ্যোজ্জ্বল লম্বা ঢেউ খেলানো চুল" }, category: "hair" },
-  { src: "/images/hair-styling.jpg", alt: { en: "Hair styling at the salon", bn: "স্যালনে হেয়ার স্টাইলিং" }, category: "hair" },
-  { src: "/images/hair-blowdry.jpg", alt: { en: "Blow-dry and curls", bn: "ব্লো-ড্রাই ও কার্ল" }, category: "hair" },
-  { src: "/images/facial-mask.jpg", alt: { en: "Facial mask treatment", bn: "ফেসিয়াল মাস্ক ট্রিটমেন্ট" }, category: "skin" },
-  { src: "/images/facial-cream.jpg", alt: { en: "Relaxing cream facial", bn: "আরামদায়ক ক্রিম ফেসিয়াল" }, category: "skin" },
-  { src: "/images/facial-treatment.jpg", alt: { en: "Advanced skin treatment", bn: "অ্যাডভান্সড স্কিন ট্রিটমেন্ট" }, category: "skin" },
-  { src: "/images/nails-dark.jpg", alt: { en: "Glossy nail art", bn: "চকচকে নেল আর্ট" }, category: "nails", tall: true },
-  { src: "/images/nails-nude.jpg", alt: { en: "Nude gel manicure", bn: "ন্যুড জেল ম্যানিকিওর" }, category: "nails" },
-  { src: "/images/nails-art.jpg", alt: { en: "Red nail art design", bn: "লাল নেল আর্ট ডিজাইন" }, category: "nails" },
-  { src: "/images/nails-salon.jpg", alt: { en: "Manicure in progress", bn: "ম্যানিকিওর চলছে" }, category: "nails" },
-  { src: "/images/salon-interior.jpg", alt: { en: "Salon styling stations", bn: "স্যালনের স্টাইলিং স্টেশন" }, category: "salon" },
-  { src: "/images/salon-interior-2.jpg", alt: { en: "Bright salon interior", bn: "আলো-ঝলমলে স্যালন" }, category: "salon" },
-  { src: "/images/salon-interior-3.jpg", alt: { en: "Salon mirrors and chairs", bn: "স্যালনের আয়না ও চেয়ার" }, category: "salon" },
 ];
 
 /* ── About timeline ───────────────────────────────────────── */

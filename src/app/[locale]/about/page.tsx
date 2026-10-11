@@ -29,20 +29,19 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} image="/images/salon-interior-3.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} image="/images/bridal-makeover-studio-private-room.jpg" />
 
       <section className="section-y">
         <div className="container-x grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <Reveal className="relative mx-auto w-full max-w-md">
             <div aria-hidden="true" className="absolute -inset-3 -z-10 translate-x-5 translate-y-5 rounded-[2rem] bg-gold-soft/60" />
-            {/* TODO: replace /images/founder.jpg with a real photo of Santi Dolai */}
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-lift">
               <Image
-                src="/images/founder.jpg"
+                src="/images/santi-dolai-founder-master-makeup-artist.jpg"
                 alt={`${tr(business.founder, locale)} — ${t("founderRole")}`}
                 fill
                 sizes="(min-width: 1024px) 28rem, 90vw"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-6 left-1/2 w-[85%] -translate-x-1/2 rounded-2xl bg-white px-6 py-4 text-center shadow-soft">

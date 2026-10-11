@@ -2,6 +2,7 @@ import { ArrowRight, GraduationCap } from "lucide-react";
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { academyPerks, courses, t as tr } from "@/content/site";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { ButtonLink } from "../ui/Button";
 import { Reveal } from "../ui/Reveal";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -15,11 +16,13 @@ export async function AcademyTeaser() {
   return (
     <section className="section-y relative isolate overflow-hidden bg-ink text-white">
       <Image
-        src="/images/luxury-bridal-cosmetics-vanity-flatlay.jpg"
+        src="/images/luxury-bridal-cosmetics-vanity-flatlay.webp"
         alt=""
         fill
         sizes="100vw"
         quality={60}
+        placeholder="blur"
+        blurDataURL={getBlurDataURL("/images/luxury-bridal-cosmetics-vanity-flatlay.webp")}
         className="-z-10 object-cover opacity-[0.12]"
       />
       <div className="container-x grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">

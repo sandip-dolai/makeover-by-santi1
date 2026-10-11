@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { WhatsAppIcon } from "../ui/BrandIcons";
 import { ButtonLink } from "../ui/Button";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { whatsappLink } from "@/lib/whatsapp";
 
 export async function Hero() {
@@ -67,11 +68,13 @@ export async function Hero() {
           />
           <div className="relative aspect-[4/5] overflow-hidden rounded-t-full rounded-b-3xl bg-blush-soft shadow-lift">
             <Image
-              src="/images/bengali-bridal-makeup-artist-debra.jpg"
+              src="/images/bengali-bridal-makeup-artist-debra.webp"
               alt={locale === "bn" ? "লাল-সোনালি ট্র্যাডিশনাল সাজে কনে" : "Bride in traditional red and gold bridal look"}
               fill
               priority
               sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, 90vw"
+              placeholder="blur"
+              blurDataURL={getBlurDataURL("/images/bengali-bridal-makeup-artist-debra.webp")}
               className="object-cover object-top"
             />
           </div>

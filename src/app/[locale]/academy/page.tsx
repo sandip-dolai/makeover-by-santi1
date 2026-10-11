@@ -12,6 +12,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PerkIcon } from "@/components/ui/ServiceIcon";
 import { academyPerks, business, courses, faqs, t as tr, testimonials } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -49,7 +50,7 @@ export default async function AcademyPage({ params }: PageProps<"/[locale]/acade
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/professional-makeup-artist-kit-brushes.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/professional-makeup-artist-kit-brushes.webp" />
 
       {/* Courses side by side */}
       <section className="section-y">
@@ -60,7 +61,15 @@ export default async function AcademyPage({ params }: PageProps<"/[locale]/acade
               <Reveal key={course.id} delay={i * 0.1} className="h-full">
                 <article className="flex h-full flex-col overflow-hidden rounded-[2rem] bg-white shadow-soft ring-1 ring-line/60">
                   <div className="relative aspect-[16/9]">
-                    <Image src={course.image} alt="" fill sizes="(min-width: 1024px) 36rem, 100vw" className="object-cover" />
+                    <Image
+                      src={course.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 36rem, 100vw"
+                      placeholder="blur"
+                      blurDataURL={getBlurDataURL(course.image)}
+                      className="object-cover"
+                    />
                     <span className="absolute left-5 top-5 rounded-full bg-ink/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold-soft backdrop-blur">
                       {tr(course.duration, locale)}
                     </span>

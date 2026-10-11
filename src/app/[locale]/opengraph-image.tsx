@@ -12,8 +12,8 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OpengraphImage() {
-  const photo = await readFile(join(process.cwd(), "public/images/traditional-indian-bride-banarasi-saree.jpg"));
-  const photoSrc = `data:image/jpeg;base64,${photo.toString("base64")}`;
+  const photo = await readFile(join(process.cwd(), "public/images/og-cover.png"));
+  const photoSrc = `data:image/png;base64,${photo.toString("base64")}`;
 
   return new ImageResponse(
     (

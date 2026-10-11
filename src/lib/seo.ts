@@ -42,6 +42,31 @@ export async function pageMetadata(locale: Locale, page: PageKey): Promise<Metad
       siteName: business.name.en,
       locale: locale === "bn" ? "bn_IN" : "en_IN",
       type: "website",
+      images: [
+        {
+          url: `${business.siteUrl}/images/traditional-indian-bride-banarasi-saree.webp`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${business.siteUrl}/images/traditional-indian-bride-banarasi-saree.webp`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
     },
   };
 }

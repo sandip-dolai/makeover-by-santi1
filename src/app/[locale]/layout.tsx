@@ -48,7 +48,7 @@ function salonJsonLd() {
     name: business.name.en,
     alternateName: [business.name.bn, "Makeover by Santi"],
     url: business.siteUrl,
-    image: `${business.siteUrl}/images/luxury-beauty-salon-interior-debra-medinipur.jpg`,
+    image: `${business.siteUrl}/images/luxury-beauty-salon-interior-debra-medinipur.webp`,
     logo: `${business.siteUrl}/images/logo-mark.png`,
     telephone: business.phone,
     email: business.email,

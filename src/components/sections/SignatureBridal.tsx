@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { services, t as tr } from "@/content/site";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { whatsappLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "../ui/BrandIcons";
 import { ButtonLink } from "../ui/Button";
@@ -21,19 +22,23 @@ export async function SignatureBridal() {
         <Reveal className="relative mx-auto w-full max-w-lg">
           <div className="relative ml-auto aspect-[3/4] w-[82%] overflow-hidden rounded-[2rem] shadow-lift">
             <Image
-              src="/images/traditional-indian-bride-banarasi-saree.jpg"
+              src="/images/traditional-indian-bride-banarasi-saree.webp"
               alt={tr(bridal.title, locale)}
               fill
               sizes="(min-width: 1024px) 26rem, 80vw"
+              placeholder="blur"
+              blurDataURL={getBlurDataURL("/images/traditional-indian-bride-banarasi-saree.webp")}
               className="object-cover"
             />
           </div>
           <div className="absolute bottom-[-8%] left-0 aspect-square w-[46%] overflow-hidden rounded-[1.5rem] border-[6px] border-ivory shadow-soft">
             <Image
-              src="/images/indian-bridal-eye-makeup-soft-glam.jpg"
+              src="/images/indian-bridal-eye-makeup-soft-glam.webp"
               alt="Indian bridal eye makeup"
               fill
               sizes="(min-width: 1024px) 14rem, 45vw"
+              placeholder="blur"
+              blurDataURL={getBlurDataURL("/images/indian-bridal-eye-makeup-soft-glam.webp")}
               className="object-cover"
             />
           </div>

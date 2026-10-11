@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { services, t as tr } from "@/content/site";
 import { Link } from "@/i18n/navigation";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { startingPrice } from "@/lib/price";
 import { ButtonLink } from "../ui/Button";
 import { Reveal } from "../ui/Reveal";
@@ -39,6 +40,8 @@ export async function ServicesPreview() {
                         alt=""
                         fill
                         sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 78vw"
+                        placeholder="blur"
+                        blurDataURL={getBlurDataURL(svc.image)}
                         className={`object-cover transition duration-700 group-hover:scale-105 ${svc.imagePosition ?? "object-center"}`}
                       />
                       <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-rose-deep backdrop-blur">

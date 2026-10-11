@@ -8,8 +8,9 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Ornament } from "@/components/ui/SectionHeading";
 import { ServiceIcon } from "@/components/ui/ServiceIcon";
-import { services, t as tr } from "@/content/site";
+import { business, services, t as tr } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { startingPrice } from "@/lib/price";
 import { pageMetadata } from "@/lib/seo";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -27,7 +28,7 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/luxury-beauty-salon-interior-debra-medinipur.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} lead={t("lead")} image="/images/luxury-beauty-salon-interior-debra-medinipur.webp" />
 
       {/* Category jump bar */}
       <nav
@@ -64,6 +65,8 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
                       alt={title}
                       fill
                       sizes="(min-width: 1024px) 34rem, 100vw"
+                      placeholder="blur"
+                      blurDataURL={getBlurDataURL(svc.image)}
                       className={`object-cover ${svc.imagePosition ?? "object-center"}`}
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-6 pt-20 text-white">
@@ -127,6 +130,30 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
       </div>
 
       <CtaBanner />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            itemListElement: services.map((s, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              item: {
+                "@type": "Service",
+                name: tr(s.title, locale),
+                description: tr(s.description, locale),
+                provider: {
+                  "@type": "BeautySalon",
+                  name: tr(business.name, locale),
+                },
+                image: `${business.siteUrl}${s.image}`,
+              },
+            })),
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
     </>
   );
 }

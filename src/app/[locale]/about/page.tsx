@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Ornament, SectionHeading } from "@/components/ui/SectionHeading";
 import { business, milestones, t as tr } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/about">): Promise<Metadata> {
@@ -29,7 +30,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
   return (
     <>
-      <PageHero tag={t("tag")} title={t("title")} image="/images/bridal-makeover-studio-private-room.jpg" />
+      <PageHero tag={t("tag")} title={t("title")} image="/images/bridal-makeover-studio-private-room.webp" />
 
       <section className="section-y">
         <div className="container-x grid items-center gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
@@ -37,10 +38,12 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
             <div aria-hidden="true" className="absolute -inset-3 -z-10 translate-x-5 translate-y-5 rounded-[2rem] bg-gold-soft/60" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-lift">
               <Image
-                src="/images/santi-dolai-founder-master-makeup-artist.jpg"
+                src="/images/santi-dolai-founder-master-makeup-artist.webp"
                 alt={`${tr(business.founder, locale)} — ${t("founderRole")}`}
                 fill
                 sizes="(min-width: 1024px) 28rem, 90vw"
+                placeholder="blur"
+                blurDataURL={getBlurDataURL("/images/santi-dolai-founder-master-makeup-artist.webp")}
                 className="object-cover object-top"
               />
             </div>
@@ -127,6 +130,27 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
 
       <Testimonials />
       <CtaBanner />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            mainEntity: {
+              "@type": "Person",
+              name: tr(business.founder, locale),
+              jobTitle: t("founderRole"),
+              worksFor: {
+                "@type": "BeautySalon",
+                name: tr(business.name, locale),
+                url: business.siteUrl,
+              },
+              image: `${business.siteUrl}/images/santi-dolai-founder-master-makeup-artist.webp`,
+            },
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
     </>
   );
 }

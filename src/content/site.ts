@@ -77,7 +77,7 @@ export const services: ServiceCategory[] = [
       en: "Your most important day deserves flawless, long-lasting beauty. Bespoke bridal looks — Bengali, North-Indian or contemporary — that stay picture-perfect from morning to midnight.",
       bn: "জীবনের সবচেয়ে বিশেষ দিনে চাই নিখুঁত, দীর্ঘস্থায়ী সৌন্দর্য। বাঙালি, নর্থ-ইন্ডিয়ান বা আধুনিক — আপনার পছন্দমতো ব্রাইডাল লুক, যা সকাল থেকে মাঝরাত পর্যন্ত থাকে একদম পারফেক্ট।",
     },
-    image: "/images/traditional-indian-bride-banarasi-saree.jpg",
+    image: "/images/traditional-indian-bride-banarasi-saree.webp",
     imagePosition: "object-top",
     icon: "crown",
     items: [
@@ -96,7 +96,7 @@ export const services: ServiceCategory[] = [
       en: "Glam, soft-glam or natural — polished looks for weddings, pujas, receptions and photo shoots.",
       bn: "গ্ল্যাম, সফট-গ্ল্যাম বা ন্যাচারাল — বিয়েবাড়ি, পুজো, রিসেপশন বা ফটোশুটের জন্য নিখুঁত সাজ।",
     },
-    image: "/images/indian-bridal-eye-makeup-soft-glam.jpg",
+    image: "/images/indian-bridal-eye-makeup-soft-glam.webp",
     icon: "sparkles",
     items: [
       { name: { en: "Party Makeup", bn: "পার্টি মেকআপ" }, price: "₹1,500" }, // TODO price
@@ -113,7 +113,7 @@ export const services: ServiceCategory[] = [
       en: "Revitalise your hair with keratin, botox, smoothening and nourishing spa treatments curated for your hair type.",
       bn: "কেরাটিন, বোটক্স, স্মুদেনিং আর হেয়ার স্পা — আপনার চুলের ধরন বুঝে তৈরি ট্রিটমেন্টে চুল হবে প্রাণবন্ত।",
     },
-    image: "/images/luxury-indian-hair-spa-wash.jpg",
+    image: "/images/luxury-indian-hair-spa-wash.webp",
     icon: "wind",
     items: [
       { name: { en: "Haircut & Styling", bn: "হেয়ারকাট ও স্টাইলিং" }, price: "₹300" }, // TODO price
@@ -132,7 +132,7 @@ export const services: ServiceCategory[] = [
       en: "Gold, diamond and pearl facials, cleanups and de-tan treatments for radiant, glowing skin.",
       bn: "গোল্ড, ডায়মন্ড ও পার্ল ফেসিয়াল, ক্লিনআপ আর ডি-ট্যান — ত্বক হবে উজ্জ্বল ও ঝলমলে।",
     },
-    image: "/images/ayurvedic-gold-facial-skin-treatment.jpg",
+    image: "/images/ayurvedic-gold-facial-skin-treatment.webp",
     icon: "gem",
     items: [
       { name: { en: "Cleanup", bn: "ক্লিনআপ" }, price: "₹400" }, // TODO price
@@ -151,7 +151,7 @@ export const services: ServiceCategory[] = [
       en: "Creative nail art, gel polish, manicures and pedicures for the perfect finishing touch.",
       bn: "ক্রিয়েটিভ নেল আর্ট, জেল পলিশ, ম্যানিকিওর ও পেডিকিওর — সাজের নিখুঁত শেষ ছোঁয়া।",
     },
-    image: "/images/indian-bridal-nail-art-maroon-gold.jpg",
+    image: "/images/indian-bridal-nail-art-maroon-gold.webp",
     icon: "brush",
     items: [
       { name: { en: "Manicure", bn: "ম্যানিকিওর" }, price: "₹400" }, // TODO price
@@ -169,7 +169,7 @@ export const services: ServiceCategory[] = [
       en: "Smooth, lasting hair removal with gentle premium waxes and precise threading.",
       bn: "নরম প্রিমিয়াম ওয়াক্স আর নিখুঁত থ্রেডিং — মসৃণ ও দীর্ঘস্থায়ী ফল।",
     },
-    image: "/images/eyebrow-threading-facial-grooming.jpg",
+    image: "/images/eyebrow-threading-facial-grooming.webp",
     icon: "leaf",
     items: [
       { name: { en: "Eyebrow Threading", bn: "আইব্রো থ্রেডিং" }, price: "₹50" }, // TODO price
@@ -212,7 +212,7 @@ export const courses: Course[] = [
       { en: "Portfolio development", bn: "পোর্টফোলিও তৈরি" },
     ],
     fee: "₹25,000", // TODO price
-    image: "/images/professional-makeup-artist-kit-brushes.jpg",
+    image: "/images/professional-makeup-artist-kit-brushes.webp",
   },
   {
     id: "beautician",
@@ -232,7 +232,7 @@ export const courses: Course[] = [
       { en: "Salon management skills", bn: "স্যালন ম্যানেজমেন্ট" },
     ],
     fee: "₹30,000", // TODO price
-    image: "/images/pro-eyeshadow-palette-bridal-makeup.jpg",
+    image: "/images/pro-eyeshadow-palette-bridal-makeup.webp",
   },
 ];
 

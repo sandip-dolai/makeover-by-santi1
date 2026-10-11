@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getBlurDataURL } from "@/lib/placeholders";
 import { Ornament } from "./SectionHeading";
 
 type Props = {
@@ -18,8 +19,10 @@ export function PageHero({ tag, title, lead, image }: Props) {
         fill
         priority
         sizes="100vw"
-        quality={60}
-        className="-z-10 object-cover opacity-45"
+        quality={75}
+        placeholder="blur"
+        blurDataURL={getBlurDataURL(image)}
+        className="-z-10 object-cover opacity-45 transition-opacity duration-500"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/70 via-ink/50 to-rose-deep/60" />
       <div className="container-x flex flex-col items-center py-20 text-center sm:py-28">

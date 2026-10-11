@@ -108,7 +108,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
           </Reveal>
           <ol className="relative mt-12 space-y-10 border-l border-gold/50 pl-8 sm:pl-10">
             {milestones.map((m, i) => (
-              <li key={m.year} className="relative">
+              <li key={`${m.year}-${i}`} className="relative">
                 <Reveal delay={i * 0.08}>
                   <span
                     aria-hidden="true"

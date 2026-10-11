@@ -51,7 +51,7 @@ export const business = {
 export const stats: { value: string; label: L }[] = [
   { value: "15+", label: { en: "Years of experience", bn: "বছরের অভিজ্ঞতা" } },
   { value: "1000+", label: { en: "Happy clients", bn: "সন্তুষ্ট গ্রাহক" } },
-  { value: "100+", label: { en: "Trained professionals", bn: "প্রশিক্ষিত পেশাদার" } },
+  { value: "80+", label: { en: "Trained students", bn: "প্রশিক্ষিত ছাত্রী" } },
   { value: "ISO", label: { en: "Certified centre", bn: "সার্টিফায়েড সেন্টার" } },
 ];
 
@@ -274,11 +274,55 @@ export const testimonials: { name: string; role: L; quote: L; lang?: "bn" }[] = 
 
 /* ── About timeline ───────────────────────────────────────── */
 export const milestones: { year: string; text: L }[] = [
-  { year: "2010", text: { en: "Santi Dolai opens the salon in Debra Bazaar.", bn: "সান্তি দলাই ডেবরা বাজারে স্যালন শুরু করেন।" } },
-  // TODO confirm year the academy started
-  { year: "2015", text: { en: "Training academy launched for aspiring beauticians.", bn: "নতুন বিউটিশিয়ানদের জন্য ট্রেনিং অ্যাকাডেমি চালু।" } },
-  { year: "ISO", text: { en: "Academy becomes an ISO-certified training centre.", bn: "অ্যাকাডেমি আইএসও সার্টিফায়েড ট্রেনিং সেন্টার হয়।" } },
-  { year: "Today", text: { en: "1000+ happy clients and 100+ trained professionals.", bn: "১০০০+ সন্তুষ্ট গ্রাহক ও ১০০+ প্রশিক্ষিত পেশাদার।" } },
+  {
+    year: "2010",
+    text: {
+      en: "Started at Dabadari Village under the name 'Ankita Ladies Beauty Parlour'.",
+      bn: "দাবাড়ারি গ্রামে 'অঙ্কিতা লেডিজ বিউটি পার্লার' নামে যাত্রা শুরু।",
+    },
+  },
+  {
+    year: "2015",
+    text: {
+      en: "Training academy launched for aspiring beauticians.",
+      bn: "নতুন বিউটিশিয়ানদের জন্য ট্রেনিং অ্যাকাডেমি চালু।",
+    },
+  },
+  {
+    year: "2017",
+    text: {
+      en: "Academy becomes an ISO-certified training centre.",
+      bn: "অ্যাকাডেমি আইএসও সার্টিফায়েড ট্রেনিং সেন্টারের স্বীকৃতি লাভ করে।",
+    },
+  },
+  {
+    year: "2017",
+    text: {
+      en: "Opened a new branch at Debra Bazar as 'Santi's Makeover and Beauty Salon and Academy'.",
+      bn: "ডেবরা বাজারে 'সান্তি'স মেকওভার অ্যান্ড বিউটি স্যালন অ্যান্ড অ্যাকাডেমি' নামে নতুন শাখা শুরু।",
+    },
+  },
+  {
+    year: "2020",
+    text: {
+      en: "Navigated through COVID-19 pandemic challenges with strict hygiene and client safety.",
+      bn: "কোভিড অতিমারীর কঠিন সময়েও কড়া স্বাস্থ্যবিধি ও নিরাপত্তা বজায় রেখে সেবা প্রদান।",
+    },
+  },
+  {
+    year: "2024",
+    text: {
+      en: "Relocated to an upgraded, larger salon space within Debra Bazar market.",
+      bn: "ডেবরা বাজারেই আরও বড় ও আধুনিক সাজানো স্যালনে স্থানান্তর।",
+    },
+  },
+  {
+    year: "Today",
+    text: {
+      en: "1,000+ happy clients and 80+ successfully trained students.",
+      bn: "১,০০০+ সন্তুষ্ট গ্রাহক এবং ৮০+ সফলভাবে প্রশিক্ষিত ছাত্রী।",
+    },
+  },
 ];
 
 /* ── FAQ ──────────────────────────────────────────────────── */

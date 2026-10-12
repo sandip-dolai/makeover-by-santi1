@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     routing.locales.map((locale) => ({
       url: absoluteUrl(locale, path),
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
+      changeFrequency: "monthly" as const,
       priority: page === "home" ? 1 : 0.8,
       alternates: {
         languages: Object.fromEntries(routing.locales.map((l) => [l, absoluteUrl(l, path)])),

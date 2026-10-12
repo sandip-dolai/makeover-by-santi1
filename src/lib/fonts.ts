@@ -8,7 +8,7 @@ import {
 
 export const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
   display: "swap",
@@ -25,6 +25,7 @@ export const dancing = Dancing_Script({
   weight: ["600"],
   variable: "--font-dancing",
   display: "swap",
+  preload: false,
 });
 
 // Bengali fonts are only referenced under :lang(bn), so they are not preloaded on English pages.

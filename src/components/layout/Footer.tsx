@@ -12,9 +12,9 @@ export async function Footer() {
   const nav = await getTranslations("nav");
 
   const socials = [
-    { href: business.social.facebook, label: "Facebook", Icon: FacebookIcon },
-    { href: business.social.instagram, label: "Instagram", Icon: InstagramIcon },
-    { href: whatsappLink(), label: "WhatsApp", Icon: WhatsAppIcon },
+    { href: business.social.facebook, label: locale === "bn" ? "ফেসবুকে সান্তি'স মেকওভার" : "Santi's Makeover on Facebook", Icon: FacebookIcon },
+    { href: business.social.instagram, label: locale === "bn" ? "ইনস্টাগ্রামে সান্তি'স মেকওভার" : "Santi's Makeover on Instagram", Icon: InstagramIcon },
+    { href: whatsappLink(), label: locale === "bn" ? "হোয়াটসঅ্যাপে বুক করুন" : "Book appointment on WhatsApp", Icon: WhatsAppIcon },
   ].filter((s) => s.href);
 
   const heading = "mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-gold";
@@ -74,20 +74,34 @@ export async function Footer() {
           <ul className="space-y-4 text-sm text-white/70">
             <li className="flex gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
-              <a href={business.mapLink} target="_blank" rel="noopener noreferrer" className={link}>
+              <a
+                href={business.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={link}
+                aria-label={locale === "bn" ? "গুগল ম্যাপে সান্তি'স মেকওভারের ঠিকানা দেখুন" : "View Santi's Makeover location on Google Maps"}
+              >
                 {tr(business.address.street, locale)}, {tr(business.address.district, locale)},{" "}
                 {tr(business.address.region, locale)} {business.address.postalCode}
               </a>
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
-              <a href={telLink} className={link}>
+              <a
+                href={telLink}
+                className={link}
+                aria-label={locale === "bn" ? `ফোন করুন ${business.phoneDisplay}` : `Call ${business.phoneDisplay}`}
+              >
                 {business.phoneDisplay}
               </a>
             </li>
             <li className="flex gap-3">
               <Mail className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
-              <a href={mailLink} className={`${link} break-all`}>
+              <a
+                href={mailLink}
+                className={`${link} break-all`}
+                aria-label={locale === "bn" ? `ইমেল পাঠান ${business.email}` : `Send email to ${business.email}`}
+              >
                 {business.email}
               </a>
             </li>

@@ -36,7 +36,11 @@ export async function Hero() {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t("lead")}</p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={whatsappLink(c("messages.general"))} size="lg">
+            <ButtonLink
+              href={whatsappLink(c("messages.general"))}
+              size="lg"
+              aria-label={locale === "bn" ? "হোয়াটসঅ্যাপে বুক করুন" : "Book appointment on WhatsApp"}
+            >
               <WhatsAppIcon size={19} /> {c("book")}
             </ButtonLink>
             <ButtonLink href="/services" variant="outline" size="lg">
@@ -72,7 +76,8 @@ export async function Hero() {
               alt={locale === "bn" ? "লাল-সোনালি ট্র্যাডিশনাল সাজে কনে" : "Bride in traditional red and gold bridal look"}
               fill
               priority
-              sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, 90vw"
+              fetchPriority="high"
+              sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, min(22rem, calc(100vw - 2rem))"
               placeholder="blur"
               blurDataURL={getBlurDataURL("/images/bengali-bridal-makeup-artist-debra.webp")}
               className="object-cover object-top"

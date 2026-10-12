@@ -70,10 +70,20 @@ export function Header() {
             <Clock className="size-3.5" aria-hidden="true" /> {tr(business.hoursLabel, locale)}
           </span>
           <div className="flex items-center gap-6">
-            <a href={business.mapLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-white">
+            <a
+              href={business.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-white"
+              aria-label={locale === "bn" ? "গুগল ম্যাপে সান্তি'স মেকওভারের ঠিকানা দেখুন" : "View Santi's Makeover location on Google Maps"}
+            >
               <MapPin className="size-3.5" aria-hidden="true" /> {tr(business.address.street, locale)}, {tr(business.address.region, locale)}
             </a>
-            <a href={telLink} className="inline-flex items-center gap-1.5 hover:text-white">
+            <a
+              href={telLink}
+              className="inline-flex items-center gap-1.5 hover:text-white"
+              aria-label={locale === "bn" ? `ফোন করুন ${business.phoneDisplay}` : `Call ${business.phoneDisplay}`}
+            >
               <Phone className="size-3.5" aria-hidden="true" /> {business.phoneDisplay}
             </a>
           </div>
@@ -109,6 +119,7 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className={buttonClass("primary", "sm", "max-md:hidden")}
+              aria-label={locale === "bn" ? "হোয়াটসঅ্যাপে বুক করুন" : "Book appointment on WhatsApp"}
             >
               <WhatsAppIcon size={17} /> {tc("bookShort")}
             </a>
@@ -176,10 +187,15 @@ export function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className={buttonClass("primary", "lg", "w-full")}
+            aria-label={locale === "bn" ? "হোয়াটসঅ্যাপে বুক করুন" : "Book appointment on WhatsApp"}
           >
             <WhatsAppIcon size={18} /> {tc("book")}
           </a>
-          <a href={telLink} className={buttonClass("outline", "lg", "w-full")}>
+          <a
+            href={telLink}
+            className={buttonClass("outline", "lg", "w-full")}
+            aria-label={locale === "bn" ? `ফোন করুন ${business.phoneDisplay}` : `Call ${business.phoneDisplay}`}
+          >
             <Phone className="size-4" aria-hidden="true" /> {business.phoneDisplay}
           </a>
         </div>

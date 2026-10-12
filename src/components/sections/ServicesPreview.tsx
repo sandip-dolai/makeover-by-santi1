@@ -39,7 +39,7 @@ export async function ServicesPreview() {
                         src={svc.image}
                         alt={`${tr(svc.title, locale)} — ${tr(svc.tagline, locale)} at Santi's Makeover Debra`}
                         fill
-                        sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 78vw"
+                        sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, min(78vw, 20rem)"
                         placeholder="blur"
                         blurDataURL={getBlurDataURL(svc.image)}
                         className={`object-cover transition duration-700 group-hover:scale-105 ${svc.imagePosition ?? "object-center"}`}
@@ -77,7 +77,11 @@ export async function ServicesPreview() {
         </ul>
 
         <div className="mt-10 flex justify-center">
-          <ButtonLink href="/services" variant="outline">
+          <ButtonLink
+            href="/services"
+            variant="outline"
+            aria-label={locale === "bn" ? "সকল পরিষেবার সম্পূর্ণ মূল্য তালিকা দেখুন" : "View complete services price list"}
+          >
             {c("viewPrices")}
           </ButtonLink>
         </div>

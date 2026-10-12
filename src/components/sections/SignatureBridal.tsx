@@ -25,7 +25,7 @@ export async function SignatureBridal() {
               src="/images/traditional-indian-bride-banarasi-saree.webp"
               alt={tr(bridal.title, locale)}
               fill
-              sizes="(min-width: 1024px) 26rem, 80vw"
+              sizes="(min-width: 1024px) 26rem, (min-width: 640px) 24rem, min(82vw, 24rem)"
               placeholder="blur"
               blurDataURL={getBlurDataURL("/images/traditional-indian-bride-banarasi-saree.webp")}
               className="object-cover"
@@ -36,7 +36,7 @@ export async function SignatureBridal() {
               src="/images/indian-bridal-eye-makeup-soft-glam.webp"
               alt="Indian bridal eye makeup"
               fill
-              sizes="(min-width: 1024px) 14rem, 45vw"
+              sizes="(min-width: 1024px) 14rem, (min-width: 640px) 12rem, min(46vw, 12rem)"
               placeholder="blur"
               blurDataURL={getBlurDataURL("/images/indian-bridal-eye-makeup-soft-glam.webp")}
               className="object-cover"
@@ -66,7 +66,10 @@ export async function SignatureBridal() {
             ))}
           </ul>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href={whatsappLink(c("messages.service", { service: tr(bridal.title, locale) }))}>
+            <ButtonLink
+              href={whatsappLink(c("messages.service", { service: tr(bridal.title, locale) }))}
+              aria-label={locale === "bn" ? `হোয়াটসঅ্যাপে বুক করুন: ${tr(bridal.title, locale)}` : `Book on WhatsApp: ${tr(bridal.title, locale)}`}
+            >
               <WhatsAppIcon size={18} /> {c("book")}
             </ButtonLink>
             <ButtonLink href="/services#bridal" variant="outline">

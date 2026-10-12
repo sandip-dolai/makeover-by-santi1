@@ -45,7 +45,7 @@ export const business = {
     facebook: "https://www.facebook.com/makeover.by.santi",
     instagram: "", // TODO: add Instagram profile URL — the icon appears automatically
   },
-  siteUrl: "https://makeoverbysanti.in",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://makeoverbysanti.vercel.app",
 } as const;
 
 export const stats: { value: string; label: L }[] = [

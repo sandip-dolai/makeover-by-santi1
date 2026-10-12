@@ -37,7 +37,7 @@ export async function ServicesPreview() {
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
                         src={svc.image}
-                        alt=""
+                        alt={`${tr(svc.title, locale)} — ${tr(svc.tagline, locale)} at Santi's Makeover Debra`}
                         fill
                         sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 78vw"
                         placeholder="blur"

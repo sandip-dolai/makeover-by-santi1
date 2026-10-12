@@ -10,7 +10,7 @@ export function BrandMark({ tone = "dark", onClick }: { tone?: "dark" | "light";
       <span
         className={`grid size-10 shrink-0 place-items-center rounded-full ring-1 transition ${light ? "bg-white/95 ring-white/30" : "bg-white ring-gold/40 group-hover:ring-gold"}`}
       >
-        <Image src="/images/logo-mark.png" alt="" width={30} height={30} className="size-7" />
+        <Image src="/images/logo-mark.png" alt="Santi's Makeover Beauty Salon & Academy Logo" width={30} height={30} className="size-7" />
       </span>
       <span className="flex flex-col leading-none">
         <span lang="en" className={`font-[family-name:var(--font-cormorant)] whitespace-nowrap text-[1.35rem] font-semibold ${light ? "text-white" : "text-rose-deep"}`}>

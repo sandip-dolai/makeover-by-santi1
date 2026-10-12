@@ -7,15 +7,16 @@ type Props = {
   title: string;
   lead?: string;
   image: string;
+  imageAlt?: string;
 };
 
 /** Compact banner used at the top of inner pages. */
-export function PageHero({ tag, title, lead, image }: Props) {
+export function PageHero({ tag, title, lead, image, imageAlt }: Props) {
   return (
     <section className="relative isolate overflow-hidden bg-ink">
       <Image
         src={image}
-        alt=""
+        alt={imageAlt || `${title} — Santi's Makeover & Beauty Salon, Debra`}
         fill
         priority
         sizes="100vw"

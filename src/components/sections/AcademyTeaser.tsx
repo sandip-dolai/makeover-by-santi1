@@ -17,7 +17,7 @@ export async function AcademyTeaser() {
     <section className="section-y relative isolate overflow-hidden bg-ink text-white">
       <Image
         src="/images/luxury-bridal-cosmetics-vanity-flatlay.webp"
-        alt=""
+        alt={locale === "bn" ? "সান্তি'স মেকওভার বিউটি অ্যাকাডেমি মেকআপ কিট ও ট্রেনিং কিট" : "Santi's Makeover Beauty Academy makeup artist training kit and cosmetics"}
         fill
         sizes="100vw"
         quality={60}

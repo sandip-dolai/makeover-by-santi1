@@ -68,5 +68,8 @@ export async function pageMetadata(locale: Locale, page: PageKey): Promise<Metad
         "max-video-preview": -1,
       },
     },
+    other: {
+      "og:updated_time": new Date().toISOString(),
+    },
   };
 }

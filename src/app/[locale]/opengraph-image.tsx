@@ -53,7 +53,7 @@ export default async function OpengraphImage() {
           <div style={{ fontSize: 26, color: "#b5334e", marginTop: 40 }}>+91 90027 17291 · makeoverbysanti.in</div>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={photoSrc} alt="" width={420} height={630} style={{ objectFit: "cover" }} />
+        <img src={photoSrc} alt="Santi's Makeover Traditional Bridal Artistry Debra" width={420} height={630} style={{ objectFit: "cover" }} />
       </div>
     ),
     size,

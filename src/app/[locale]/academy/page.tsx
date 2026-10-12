@@ -63,7 +63,7 @@ export default async function AcademyPage({ params }: PageProps<"/[locale]/acade
                   <div className="relative aspect-[16/9]">
                     <Image
                       src={course.image}
-                      alt=""
+                      alt={`${title} — Santi's Makeover ISO-Certified Academy Debra`}
                       fill
                       sizes="(min-width: 1024px) 36rem, 100vw"
                       placeholder="blur"

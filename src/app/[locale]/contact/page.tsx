@@ -9,6 +9,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { business, courses, faqs, services, t as tr } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
+import { getBookingFormLabels } from "@/lib/booking-labels";
 import { pageMetadata } from "@/lib/seo";
 import { mailLink, telLink, whatsappLink } from "@/lib/whatsapp";
 
@@ -23,6 +24,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
   const t = await getTranslations("contact");
   const nav = await getTranslations("nav");
   const c = await getTranslations("cta");
+  const bookingLabels = await getBookingFormLabels();
 
   const address = `${tr(business.address.street, locale)}, ${tr(business.address.district, locale)}, ${tr(business.address.region, locale)} ${business.address.postalCode}`;
 
@@ -97,6 +99,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
 
           <Reveal delay={0.1}>
             <BookingForm
+              labels={bookingLabels}
               groups={[
                 { label: nav("services"), options: services.map((s) => tr(s.title, locale)) },
                 { label: nav("academy"), options: courses.map((x) => tr(x.title, locale)) },

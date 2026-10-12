@@ -6,10 +6,11 @@ import { mailLink, telLink, whatsappLink } from "@/lib/whatsapp";
 import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "../ui/BrandIcons";
 import { BrandMark } from "./BrandMark";
 
-export async function Footer() {
-  const locale = await getLocale();
-  const t = await getTranslations("footer");
-  const nav = await getTranslations("nav");
+export async function Footer({ locale: propLocale }: { locale?: string } = {}) {
+  const locale = propLocale ?? (await getLocale());
+  const t = await getTranslations({ locale, namespace: "footer" });
+  const nav = await getTranslations({ locale, namespace: "nav" });
+  const brand = await getTranslations({ locale, namespace: "brand" });
 
   const socials = [
     { href: business.social.facebook, label: locale === "bn" ? "ফেসবুকে সান্তি'স মেকওভার" : "Santi's Makeover on Facebook", Icon: FacebookIcon },
@@ -25,7 +26,7 @@ export async function Footer() {
       <div className="h-1 bg-gradient-to-r from-rose-deep via-gold to-rose-deep" />
       <div className="container-x grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
         <div>
-          <BrandMark tone="light" />
+          <BrandMark tone="light" subtitle={brand("sub")} />
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">{t("about")}</p>
           <div className="mt-6 flex gap-3">
             {socials.map(({ href, label, Icon }) => (

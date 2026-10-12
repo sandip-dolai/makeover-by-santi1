@@ -31,7 +31,7 @@ export async function Hero() {
           </p>
           <h1 className="text-[2.75rem] font-semibold leading-[1.02] text-ink sm:text-6xl lg:text-[4.6rem]">
             {t("title")}{" "}
-            <em className="font-medium italic text-rose">{t("titleAccent")}</em>
+            <em className="font-semibold italic text-rose">{t("titleAccent")}</em>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{t("lead")}</p>
 

@@ -1,3 +1,4 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
@@ -53,6 +54,23 @@ const nextConfig: NextConfig = {
     deviceSizes: [256, 320, 360, 384, 414, 512, 640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     qualities: [60, 70, 75, 85],
+  },
+  turbopack: {
+    resolveAlias: {
+      "../build/polyfills/polyfill-module": "./src/lib/empty.js",
+      "next/dist/build/polyfills/polyfill-module": "./src/lib/empty.js",
+      "@next/polyfill-module": "./src/lib/empty.js",
+    },
+  },
+  webpack(config) {
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "../build/polyfills/polyfill-module": path.resolve(process.cwd(), "src/lib/empty.js"),
+      "next/dist/build/polyfills/polyfill-module": path.resolve(process.cwd(), "src/lib/empty.js"),
+      "@next/polyfill-module": path.resolve(process.cwd(), "src/lib/empty.js"),
+    };
+    return config;
   },
   experimental: {
     optimizePackageImports: ["lucide-react"],

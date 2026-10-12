@@ -5,9 +5,9 @@ import { telLink, whatsappLink } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "../ui/BrandIcons";
 
 /** Thumb-reachable Call · WhatsApp · Directions bar, shown on phones only. */
-export async function MobileActionBar() {
-  const locale = await getLocale();
-  const t = await getTranslations("cta");
+export async function MobileActionBar({ locale: propLocale }: { locale?: string } = {}) {
+  const locale = propLocale ?? (await getLocale());
+  const t = await getTranslations({ locale, namespace: "cta" });
   const item =
     "flex flex-1 flex-col items-center justify-center gap-1 text-[0.72rem] font-medium min-h-14 transition active:scale-95";
 

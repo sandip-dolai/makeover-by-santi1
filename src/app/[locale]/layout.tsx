@@ -86,7 +86,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
     <html lang={locale} className={fontVariables}>
       <body className="min-h-dvh antialiased">
         <NextIntlClientProvider>
-          <Header locale={locale} />
+          <Header />
           <main id="main">{children}</main>
           <Footer locale={locale} />
           <MobileActionBar locale={locale} />

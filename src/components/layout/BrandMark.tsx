@@ -1,16 +1,21 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 export function BrandMark({
   tone = "dark",
-  subtitle = "Beauty Salon & Academy",
+  subtitle,
   onClick,
 }: {
   tone?: "dark" | "light";
   subtitle?: string;
   onClick?: () => void;
 }) {
+  const t = useTranslations("brand");
   const light = tone === "light";
+  const sub = subtitle ?? t("sub");
   return (
     <Link href="/" onClick={onClick} className="group flex items-center gap-2.5" aria-label="Santi's Makeover — Home">
       <span
@@ -25,7 +30,7 @@ export function BrandMark({
         <span
           className={`mt-1 text-[0.62rem] font-medium uppercase tracking-[0.2em] ${light ? "text-gold-soft" : "text-gold-deep"}`}
         >
-          {subtitle}
+          {sub}
         </span>
       </span>
     </Link>

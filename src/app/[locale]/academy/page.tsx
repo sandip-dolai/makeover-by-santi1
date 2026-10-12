@@ -12,7 +12,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PerkIcon } from "@/components/ui/ServiceIcon";
 import { academyPerks, business, courses, faqs, t as tr, testimonials } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
-import { getBookingFormLabels } from "@/lib/booking-labels";
 import { getBlurDataURL } from "@/lib/placeholders";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -27,7 +26,6 @@ export default async function AcademyPage({ params }: PageProps<"/[locale]/acade
   setRequestLocale(locale);
   const t = await getTranslations("academy");
   const c = await getTranslations("cta");
-  const bookingLabels = await getBookingFormLabels();
 
   const story = testimonials.find((x) => x.name === "Moumita Manna")!;
   const courseFaqs = faqs.slice(3).map((f) => ({ q: tr(f.q, locale), a: tr(f.a, locale) }));
@@ -157,7 +155,6 @@ export default async function AcademyPage({ params }: PageProps<"/[locale]/acade
           </Reveal>
           <Reveal delay={0.1}>
             <BookingForm
-              labels={bookingLabels}
               title={t("formTitle")}
               showDate={false}
               groups={[{ label: t("tag"), options: courses.map((x) => tr(x.title, locale)) }]}

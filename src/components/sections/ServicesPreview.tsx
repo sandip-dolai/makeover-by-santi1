@@ -39,7 +39,8 @@ export async function ServicesPreview() {
                         src={svc.image}
                         alt={`${tr(svc.title, locale)} — ${tr(svc.tagline, locale)} at Santi's Makeover Debra`}
                         fill
-                        sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, min(78vw, 20rem)"
+                        sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, (min-width: 480px) 260px, 220px"
+                        quality={70}
                         placeholder="blur"
                         blurDataURL={getBlurDataURL(svc.image)}
                         className={`object-cover transition duration-700 group-hover:scale-105 ${svc.imagePosition ?? "object-center"}`}

@@ -77,7 +77,7 @@ export async function Hero() {
               fill
               priority
               fetchPriority="high"
-              sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, min(22rem, calc(100vw - 2rem))"
+              sizes="(min-width: 1024px) 28rem, (min-width: 640px) 28rem, (min-width: 480px) 320px, 260px"
               placeholder="blur"
               blurDataURL={getBlurDataURL("/images/bengali-bridal-makeup-artist-debra.webp")}
               className="object-cover object-top"

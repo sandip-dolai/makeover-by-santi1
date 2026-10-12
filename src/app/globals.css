@@ -16,8 +16,8 @@
   --color-muted: #75606a;
   --color-line: #ecdfd6;
 
-  --font-display: var(--font-cormorant), "Noto Serif Bengali", Georgia, serif;
-  --font-sans: var(--font-jost), "Hind Siliguri", system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jost), system-ui, sans-serif;
   --font-script: var(--font-dancing), cursive;
 
   --shadow-soft: 0 10px 40px -12px rgb(26 16 21 / 0.14);

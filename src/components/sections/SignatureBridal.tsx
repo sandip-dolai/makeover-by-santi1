@@ -25,7 +25,7 @@ export async function SignatureBridal() {
               src="/images/traditional-indian-bride-banarasi-saree.webp"
               alt={tr(bridal.title, locale)}
               fill
-              sizes="(min-width: 1024px) 26rem, (min-width: 640px) 24rem, min(82vw, 24rem)"
+              sizes="(min-width: 1024px) 26rem, (min-width: 640px) 24rem, (min-width: 480px) 280px, 230px"
               placeholder="blur"
               blurDataURL={getBlurDataURL("/images/traditional-indian-bride-banarasi-saree.webp")}
               className="object-cover"
@@ -36,7 +36,7 @@ export async function SignatureBridal() {
               src="/images/indian-bridal-eye-makeup-soft-glam.webp"
               alt="Indian bridal eye makeup"
               fill
-              sizes="(min-width: 1024px) 14rem, (min-width: 640px) 12rem, min(46vw, 12rem)"
+              sizes="(min-width: 1024px) 14rem, (min-width: 640px) 12rem, (min-width: 480px) 180px, 150px"
               placeholder="blur"
               blurDataURL={getBlurDataURL("/images/indian-bridal-eye-makeup-soft-glam.webp")}
               className="object-cover"
